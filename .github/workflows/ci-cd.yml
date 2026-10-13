@@ -91,7 +91,7 @@ jobs:
 
         steps:
             - name: Triển khai ứng dụng tới VPS
-              uses: appleboy/ssh-action@v1.2.2
+              uses: appleboy/ssh-action@v1.2.5
               with:
                   host: ${{ secrets.VPS_HOST }}
                   username: ${{ secrets.VPS_USERNAME }}
