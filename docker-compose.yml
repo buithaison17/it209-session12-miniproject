@@ -12,14 +12,14 @@ services:
         depends_on:
             - mysql
 
-    # frontend:
-    #     image: sonbui17/student-frontend:latest
-    #     container_name: student-frontend
-    #     restart: unless-stopped
-    #     ports:
-    #         - "80:80"
-    #     depends_on:
-    #         - backend
+    frontend:
+        image: sonbui17/student-frontend:latest
+        container_name: student-frontend
+        restart: unless-stopped
+        ports:
+            - "80:80"
+        depends_on:
+            - backend
 
     mysql:
         image: mysql:8.0
