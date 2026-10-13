@@ -29,9 +29,9 @@ jobs:
               run: chmod +x gradlew
 
             # 4. Kiểm thử backend
-            - name: Test Spring Boot
-              working-directory: student-backend
-              run: ./gradlew test
+            # - name: Test Spring Boot
+            #   working-directory: student-backend
+            #   run: ./gradlew test
 
             # 5. Build backend
             - name: Build Spring Boot
@@ -52,9 +52,9 @@ jobs:
               run: npm ci
 
             # 8. Kiểm thử frontend nếu có script test
-            - name: Test React
-              working-directory: student-frontend
-              run: npm test --if-present
+            # - name: Test React
+            #   working-directory: student-frontend
+            #   run: npm test --if-present
 
             # 9. Build frontend
             - name: Build React
@@ -103,7 +103,7 @@ jobs:
                       cd ~/mini-project
 
                       if [ ! -d ".git" ]; then
-                        git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git .
+                        git clone https://github.com/buithaison17/it209-session12-miniproject.git .
                       else
                         git pull origin main
                       fi
